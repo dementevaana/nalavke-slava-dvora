@@ -4,11 +4,11 @@
 # authors: NaLavke
 # url: https://github.com/dementevaana/nalavke-slava-dvora
 
-register_category_custom_field_type("nl_owner_id", :integer)
-register_category_custom_field_type("nl_adult", :boolean)
-register_category_custom_field_type("nl_topic", :string)
-
 after_initialize do
+  register_category_custom_field_type("nl_owner_id", :integer)
+  register_category_custom_field_type("nl_adult", :boolean)
+  register_category_custom_field_type("nl_topic", :string)
+
   class ::SlavaDvoraController < ::ApplicationController
     def index
       render_json_dump(

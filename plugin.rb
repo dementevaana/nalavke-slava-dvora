@@ -8,6 +8,7 @@ after_initialize do
   register_category_custom_field_type("nl_owner_id", :integer)
   register_category_custom_field_type("nl_adult", :boolean)
   register_category_custom_field_type("nl_topic", :string)
+  register_preloaded_category_custom_fields("nl_topic")
 
   class ::SlavaDvoraController < ::ApplicationController
     def index
